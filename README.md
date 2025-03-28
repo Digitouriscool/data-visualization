@@ -1,0 +1,1 @@
+Data Visualization Project written in Python using the Matplotlib and Plotly libraries.
