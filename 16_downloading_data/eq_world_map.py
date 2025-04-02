@@ -25,10 +25,10 @@ for eq_dict in all_eq_dicts:
     lons.append(lon)
     lats.append(lat)
 
-print(mags[:10])
-print(lons[:5])
-print(lats[:5])
-
 title = 'Global Earthquakes'
-fig = px.scatter_geo(lat=lats, lon=lons, size=mags, title=title)
+fig = px.scatter_geo(lat=lats, lon=lons, size=mags, title=title,
+                     color=mags,
+                     color_continuous_scale='Viridis',
+                     labels={'color':'Magnitude'},
+                     projection='natural earth')
 fig.show()
